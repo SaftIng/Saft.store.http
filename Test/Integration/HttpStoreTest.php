@@ -86,7 +86,7 @@ class HttpStoreTest extends TestCase
      */
     public function testAuthOnServer()
     {
-        if (isset($_ENV['TRAVIS'])) {
+        if (defined('TRAVIS')) {
             $this->markTestSkipped('We need a pre-configured Virtuoso server for this test. Test only runs locally.');
         }
 
